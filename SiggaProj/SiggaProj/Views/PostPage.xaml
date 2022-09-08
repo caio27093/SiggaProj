@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SiggaProj.Views.PostPage"
+             NavigationPage.HasNavigationBar="True">
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView x:Name="ItemsListView" ItemsSource="{Binding PostsList}" SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Margin="5,25,5,25">
+                            <Label Text="{Binding title}" FontSize="Large" FontAttributes="Bold"/>
+                            <Label Text="{Binding body}" FontSize="Medium"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="Voltar" Clicked="Voltar"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
